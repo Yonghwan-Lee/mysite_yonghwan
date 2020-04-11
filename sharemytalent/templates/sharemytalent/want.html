@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="kor">
+    <head>
+        <meta charset="utf-8">
+        <title>Share my talent_Sogang</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'sharemytalent/css/wantstyle.css' %}">
+    </head>
+    <body>
+        <header>
+            <img src="{% static 'sharemytalent/image/서강이1.png' %}">
+            <div id="title" >Share your talent_Sogang</div>
+            <div id="order">
+                <a href="{% url 'home' %}">Go back!</a>
+            </div>
+        </header>
+        <main>
+            <div class="box">
+                <p>Post what you want to learn!</p>
+                <hr width="90%" align="center" color="black">
+                <form method="POST" class="post-form"> {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Done!</button>
+                </form>
+            </div>
+        </main>
+        <footer>Just share your talent!</footer>
+    </body>
+</html>
