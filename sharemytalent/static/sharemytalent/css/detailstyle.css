@@ -42,7 +42,6 @@ footer{
     height: 80%;
     width: 80%;
     border: 2px solid black;
-    padding: 10px;
 }
 #title{
     margin-left: 0px;
@@ -67,8 +66,27 @@ header img{
     font-family: Helvetica;
     color: black
 }
-.box a{
-    font-size: 15px;
+form{
     font-family: Helvetica;
-    text-align: center;
+    font-size: 20px;
+}
+main .box{
+    font-family: Helvetica;
+    font-weight: Bold;
+    padding: 0px 30px;
+}
+main .box{
+    font-size: 25px;
+}
+main .box .date{
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: Bold;
+}
+main .box .body{
+    font-size: 20px;
+}
+main .box a{
+    font-size: 15px;
+    color: black;
 }

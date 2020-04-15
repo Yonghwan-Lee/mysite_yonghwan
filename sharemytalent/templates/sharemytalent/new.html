@@ -15,13 +15,16 @@
             </div>
         </header>
         <main>
-            <div class="box">
-                <p>Share your talent now!</p>
-                <hr width="90%" align="center" color="black">
-                <form method="POST" class="post-form"> {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Done!</button>
-                </form>
+            <div id="top">멘티에게 공유하고 싶은 재능을 올려주세요!</div>
+            <div id="container">
+                <div class="box">
+                    <p>Share your talent now!</p>
+                    <hr width="90%" align="center" color="black">
+                    <form method="POST" class="post-form"> {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Done!</button>
+                    </form>
+                </div>
             </div>
         </main>
         <footer>Just share your talent!</footer>

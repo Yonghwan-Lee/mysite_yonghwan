@@ -11,21 +11,20 @@
             <img src="{% static 'sharemytalent/image/서강이1.png' %}">
             <div id="title" >Share your talent_Sogang</div>
             <div id="order">
-                <a href="{% url 'new' %}">Share now!</a>
-                <a href="{% url 'want' %}">Apply now!</a>
+                <a href="{% url 'new' %}">Be a mentor!</a>
+                <a href="{% url 'want' %}">Be a mentee!</a>
             </div>
         </header>
-        <main  style="overflow:scroll; padding:10px;">
-            {% for post in posts_list %}
-                <div class="box">
-                    <div class="box_number" >제목 : {{ post.title }}</div>
-                    <hr width="90%" align="center" color="black">
-                    <div class="time"> 작성 시간: {{ post.pub_date }}</div>
-                    <hr width="90%" align="center" color="black">
-                    <div class="content"> {{ post.body }}
+        <main>
+            <div id="top">서강인의 재능 공유의 장, Share your talent입니다!</div>
+            <div id="container">
+                <div class="box" style="overflow:auto";>
+                    {% for post in posts_list %}
+                        <a href="{% url 'detail' pk=post.pk %}">{{ post.title }}</a>
+                        <hr width="100%" size="1px" align="center" color="black">
+                    {% endfor %}
                 </div>
-            {% endfor %}
-            
+            </div>
         </main>
         <footer>Just share your talent!</footer>
     </body>

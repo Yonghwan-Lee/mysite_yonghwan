@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>Share my talent_Sogang</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'sharemytalent/css/wantstyle.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'sharemytalent/css/editstyle.css' %}">
     </head>
     <body>
         <header>
@@ -15,18 +15,17 @@
             </div>
         </header>
         <main>
-            <div id="top">멘토에게 배우고 싶은 재능을 올려주세요!</div>
+            <div id="top">게시글을 수정하세요!</div>
             <div id="container">
                 <div class="box">
-                    <p>Which talent do you want?</p>
+                    <p>Edit your post now!</p>
                     <hr width="90%" align="center" color="black">
-                    <form method="POST" class="post-form"> {% csrf_token %}
+                    <form method="POST" class="post-form">{% csrf_token %}
                         {{ form.as_p }}
-                        <button type="submit">Done!</button>
+                        <button type="submit" class="save btn btn-default">Save</button>
                     </form>
                 </div>
             </div>
         </main>
         <footer>Just share your talent!</footer>
     </body>
-</html>

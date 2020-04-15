@@ -22,4 +22,7 @@ urlpatterns = [
     path('', sharemytalent.views.home, name="home"),
     path('new/', sharemytalent.views.new, name="new"),
     path('want/', sharemytalent.views.want, name="want"),
+    path('detail/<int:pk>', sharemytalent.views.detail, name="detail"),
+    path('edit/<int:pk>', sharemytalent.views.edit, name="edit"),
+    path('detail/<int:pk>/delete', sharemytalent.views.delete, name="delete"),
 ]
