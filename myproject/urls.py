@@ -25,4 +25,5 @@ urlpatterns = [
     path('detail/<int:pk>', sharemytalent.views.detail, name="detail"),
     path('edit/<int:pk>', sharemytalent.views.edit, name="edit"),
     path('detail/<int:pk>/delete', sharemytalent.views.delete, name="delete"),
+    path('detail/<int:pk>/comment/<int:comment_pk>/delete/', sharemytalent.views.delete_comment, name="delete_comment"),
 ]

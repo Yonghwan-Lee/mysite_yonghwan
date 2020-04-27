@@ -90,3 +90,16 @@ main .box a{
     font-size: 15px;
     color: black;
 }
+.comment {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+input {
+    width: 450px;
+}
+.comment p{
+    font-size: 13px;
+}
+main .box .comment a{
+    font-size: 10px;
+}

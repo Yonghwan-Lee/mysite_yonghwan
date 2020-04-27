@@ -17,7 +17,7 @@
         <main>
             <div id="top">댓글을 남겨 매칭을 시도하세요!</div>
             <div id="container">
-                <div class="box">
+                <div class="box" style="overflow:auto";>
                     <p>{{ post.title }}</p>
                     <hr width="100%" align="center" color="black">
                     {% if post.pub_date %}
@@ -30,6 +30,21 @@
 
                     <a href="{% url 'edit' pk=post.pk %}">수정하기</a><br>
                     <a href="{% url 'delete' pk=post.pk %}">삭제하기</a>
+
+                    <div class="comment">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <input type="text", name="text">
+                            <button type="submit">댓글 달기</button>
+                        </form>
+    
+                        {% for comment in comment_list %}
+                        <p>{{ comment.created_date }}</p>
+                        <p>{{ comment.text|linebreaks }}</p>
+                        <a href="{% url 'delete_comment' pk=post.pk comment_pk=comment.pk %}">댓글 삭제</a>
+                        <hr width="100%" align="center" color="black">
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </main>
